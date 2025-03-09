@@ -1,4 +1,6 @@
-# Node.js dependencies
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -8,59 +10,36 @@
 !.yarn/releases
 !.yarn/versions
 
-# Testing/coverage
+# testing
 /coverage
-.nyc_output
-*.lcov
 
-# Build outputs
+# next.js
 /.next/
 /out/
-/build
-.dist
-.esbuild
-.parcel-cache
-.cache/
-.temp
-.docusaurus
-.serverless/
-.fusebox/
-.vuepress/dist
 
-# Logs
-logs
-*.log
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
 .pnpm-debug.log*
-.report.json
 
-# Environment files
+# env files (can opt-in for committing if needed)
 .env*
-!.env.example
 
-# IDE/OS-specific
-.DS_Store
-Thumbs.db
-.node_repl_history
-.vscode-test
+# vercel
+.vercel
 
-# Package managers
-.yarn-integrity
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# Other
-*.pem
-*.pid
-*.seed
-*.tgz
-=======
 # Logs
 logs
 *.log
@@ -191,4 +170,78 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
->>>>>>> 520a196c8e5230b80006afe23ad05c236bafff4b
+
+# Node.js dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build outputs
+/.next/
+/out/
+.build
+.dist
+.esbuild
+.parcel-cache
+.cache/
+.temp
+.docusaurus
+.serverless/
+.fusebox/
+.nuxt
+dist
+.cache/
+.vuepress/dist
+
+# Logs & Diagnostics
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+*.lcov
+.nyc_output
+.grunt
+
+# Environment files
+.env*
+!.env.example
+
+# OS-specific
+.DS_Store
+Thumbs.db
+.node_repl_history
+.tern-port
+
+# Package managers
+.yarn-integrity
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Other
+*.pem
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+lib-cov
+bower_components
+.lock-wscript
+build/Release
+jspm_packages/
+web_modules/
+.vscode-test
+.dynamodb/
